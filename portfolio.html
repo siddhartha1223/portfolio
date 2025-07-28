@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moogi Siddhartha | Data Scientist & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f;
+            color: #8892b0;
+        }
+        .font-display {
+            font-family: 'Roboto Slab', serif;
+            color: #ccd6f6;
+        }
+        .glass-nav {
+            background-color: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #64ffda, #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: #112240;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
+        }
+        .section-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #ccd6f6;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #64ffda;
+            border-radius: 2px;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+            color: #ccd6f6;
+        }
+        .nav-link:hover {
+            color: #64ffda;
+        }
+        .btn-primary {
+            background-color: transparent;
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: #233554;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.4rem;
+            top: 0.25rem; /* Adjusted for better vertical alignment */
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            background-color: #0a192f;
+            border: 2px solid #64ffda;
+        }
+        .project-card {
+            min-height: 300px; /* Ensure cards have a minimum height */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white font-mono">MS</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="btn-primary px-5 py-2 rounded-md font-semibold">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-teal-300">About</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-teal-300">Experience</a>
+            <a href="#work" class="block py-2 text-gray-300 hover:text-teal-300">Work</a>
+            <a href="#certifications" class="block py-2 text-gray-300 hover:text-teal-300">Certifications</a>
+            <a href="#contact" class="block mt-2 btn-primary text-center px-4 py-2 rounded-md">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center">
+            <div data-aos="fade-up" class="max-w-4xl">
+                <span class="text-lg text-teal-300 font-mono">Hi, my name is</span>
+                <h1 class="font-display text-5xl md:text-7xl font-extrabold mt-4 mb-2">Moogi Siddhartha.</h1>
+                <h2 class="font-display text-4xl md:text-6xl font-extrabold text-slate-400 mb-8">I build things for the web & beyond.</h2>
+                <p class="text-lg max-w-xl mb-12">
+                    I'm a Data Science student with a passion for product design and photography. I specialize in creating intuitive, data-driven user experiences and telling compelling visual stories.
+                </p>
+                <a href="#work" class="btn-primary px-10 py-4 rounded-md text-lg font-semibold">Check out my work!</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display section-title">About Me</h2>
+            </div>
+            <div class="grid md:grid-cols-5 gap-12 items-center" data-aos="fade-up">
+                <div class="md:col-span-3">
+                    <p class="mb-4">
+                        Hello! I'm Siddhartha, a detail-oriented and motivated final-year B.Tech student at Raghu Engineering College, specializing in Data Science. My academic background has given me a strong foundation in data analytics and programming, which I love to combine with my passion for UI/UX design.
+                    </p>
+                    <p class="mb-4">
+                        I believe the most impactful products are built on a deep, empathetic understanding of user needs, validated by data. My experience as an NSS volunteer has further strengthened my desire to create technology that helps people and contributes positively to the community.
+                    </p>
+                    <p class="mb-6">Here are a few technologies I’ve been working with recently:</p>
+                    <ul class="grid grid-cols-2 gap-2 font-mono text-sm">
+                        <li class="flex items-center"><span class="text-teal-300 mr-2">▹</span>Python & Pandas</li>
+                        <li class="flex items-center"><span class="text-teal-300 mr-2">▹</span>Figma</li>
+                        <li class="flex items-center"><span class="text-teal-300 mr-2">▹</span>SQL (MySQL)</li>
+                        <li class="flex items-center"><span class="text-teal-300 mr-2">▹</span>HTML & CSS</li>
+                        <li class="flex items-center"><span class="text-teal-300 mr-2">▹</span>AWS Services</li>
+                        <li class="flex items-center"><span class="text-teal-300 mr-2">▹</span>UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 relative" data-aos="fade-left">
+                    <div class="w-full h-full rounded-lg bg-teal-300 transition-transform transform hover:translate-x-2 hover:translate-y-2">
+                        <img src="images/Profile.jpeg" alt="Moogi Siddhartha" class="rounded-lg w-full h-auto object-cover relative z-10 -translate-x-4 -translate-y-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 md:py-32">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display section-title">Where I've Worked</h2>
+            </div>
+            <div class="relative max-w-3xl mx-auto timeline pl-8" data-aos="fade-up">
+                <!-- Timeline Item 1 -->
+                <div class="mb-12 relative">
+                    <!--div class="timeline-dot"></div-->
+                    <h3 class="text-xl font-bold text-slate-200">Data Engineering Intern <span class="text-teal-300">@ AWS</span></h3>
+                    <p class="font-mono text-sm text-slate-400 mb-3">Apr 2025 – Jun 2025</p>
+                    <p class="mb-3">Developed and maintained data pipelines using AWS Glue and Lambda; worked with S3 and Redshift for ETL and real-time data transformations.</p>
+                    <a href="https://drive.google.com/file/d/1bNKBQQTFcHlh1juI1L6LJgBX7YQl_HUc/view?usp=sharing" target="_blank" class="btn-primary px-4 py-2 rounded-md text-sm font-semibold">View Certificate</a>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="mb-12 relative">
+                    <!-- div class="timeline-dot"></div-->
+                    <h3 class="text-xl font-bold text-slate-200">AI/ML Intern <span class="text-teal-300">@ AWS</span></h3>
+                    <p class="font-mono text-sm text-slate-400 mb-3">Jan 2025 – Mar 2025</p>
+                    <p class="mb-3">Built and deployed ML models using AWS SageMaker; handled data preprocessing tasks and performed model evaluation.</p>
+                    <a href="https://drive.google.com/file/d/1Tg3fFgAEMa5apjByZv9bupIcu6uCAjy_/view?usp=sharing" target="_blank" class="btn-primary px-4 py-2 rounded-md text-sm font-semibold">View Certificate</a>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="relative">
+                    <!--div class="timeline-dot"></div-->
+                    <h3 class="text-xl font-bold text-slate-200">Cloud Intern <span class="text-teal-300">@ AWS</span></h3>
+                    <p class="font-mono text-sm text-slate-400 mb-3">Apr 2024 – Jun 2024</p>
+                    <p class="mb-3">Gained practical experience with AWS infrastructure and services, deploying sample cloud applications and managing resources effectively.</p>
+                    <a href="https://drive.google.com/file/d/1Xd2p4E9Y__UEBOWm7YnaSaLrqZExDEpL/view?usp=sharing" target="_blank" class="btn-primary px-4 py-2 rounded-md text-sm font-semibold">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="py-20 md:py-32">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display section-title">Things I've Built</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1: Flight Ticket Booking System -->
+                <div class="card project-card rounded-lg relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/FTBS Cover.png" alt="Flight Ticket Booking System" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#112240] via-[#112240]/80 to-transparent z-0"></div>
+                    <div class="relative z-10 p-8 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <span class="text-sm text-teal-300 font-semibold">FULL-STACK & UX</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-3 text-slate-200">Flight Ticket Booking System</h3>
+                            <p>A complete booking platform featuring seat selection, secure authentication, and PDF ticket generation, designed for a seamless user journey.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Food Ordering App -->
+                <div class="card project-card rounded-lg relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/FOA Cover.png" alt="Food Ordering App" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#112240] via-[#112240]/80 to-transparent z-0"></div>
+                    <div class="relative z-10 p-8 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <span class="text-sm text-teal-300 font-semibold">UI/UX DESIGN</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-3 text-slate-200">Food Ordering App Concept</h3>
+                            <p>Mobile-first screens for a food delivery app, focusing on intuitive user flow, clear navigation, and strong visual consistency using Figma.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 md:py-32">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display section-title">Credentials & Certifications</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <a href="images/Figma.jpg" target="_blank" class="card block p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-2 text-slate-200">UI/UX Design Bootcamp</h3>
+                    <p class="text-slate-400 font-medium">LetsUpgrade</p>
+                </a>
+                <a href="images/Java.jpg" target="_blank" class="card block p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-2 text-slate-200">OOP in Java</h3>
+                    <p class="text-slate-400 font-medium">NPTEL</p>
+                </a>
+                <a href="images/SQL.png" target="_blank" class="card block p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-2 text-slate-200">SQL Basics</h3>
+                    <p class="text-slate-400 font-medium">SkillRack</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Photography & Achievements -->
+        <section id="photography" class="py-20 md:py-32">
+             <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display section-title">Photography & Awards</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16 max-w-6xl mx-auto" data-aos="fade-up">
+                <div class="rounded-lg overflow-hidden"><img src="images/Photo1.jpeg" alt="Photography 1" class="w-full h-full object-cover shadow-md opacity-80 hover:opacity-100 transition-opacity"></div>
+                <div class="rounded-lg overflow-hidden"><img src="images/Photo2.jpeg" alt="Photography 2" class="w-full h-full object-cover shadow-md opacity-80 hover:opacity-100 transition-opacity"></div>
+                <div class="rounded-lg overflow-hidden"><img src="images/Photo3.jpeg" alt="Photography 3" class="w-full h-full object-cover shadow-md opacity-80 hover:opacity-100 transition-opacity"></div>
+                <div class="rounded-lg overflow-hidden"><img src="images/Photo4.jpeg" alt="Photography 4" class="w-full h-full object-cover shadow-md opacity-80 hover:opacity-100 transition-opacity"></div>
+                <div class="rounded-lg overflow-hidden"><img src="images/Photo5.jpeg" alt="Photography 5" class="w-full h-full object-cover shadow-md opacity-80 hover:opacity-100 transition-opacity"></div>
+                <div class="rounded-lg overflow-hidden"><img src="images/Photo6.jpeg" alt="Photography 6" class="w-full h-full object-cover shadow-md opacity-80 hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="card max-w-4xl mx-auto bg-slate-800/50 rounded-lg shadow-xl overflow-hidden md:flex" data-aos="zoom-in-up">
+                <img src="images/Achievement.jpeg" alt="ISRO Photography Contest Winning Photo" class="md:w-1/2 h-full w-full object-cover">
+                <div class="p-8 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+                    <h3 class="font-display text-2xl font-semibold text-slate-200 mb-2">Winner, ISRO Photography Contest</h3>
+                    <p class="text-lg text-slate-400">College Level – 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 text-center">
+            <div data-aos="fade-up">
+                <h3 class="font-mono text-teal-300">What's Next?</h3>
+                <h2 class="font-display text-5xl font-bold text-slate-200 my-4">Get In Touch</h2>
+                <p class="max-w-xl mx-auto mb-8">
+                    I'm actively seeking new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll get back to you!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mb-12">
+                    <a href="mailto:moogisiddhartha@gmail.com" class="text-lg font-mono text-slate-300 hover:text-teal-300 transition-colors">moogisiddhartha@gmail.com</a>
+                    <span class="text-lg font-mono text-slate-300">+91 77308 95135</span>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/moogi-siddhartha-582221329/" target="_blank" class="text-slate-400 hover:text-white transition-transform hover:scale-110" aria-label="LinkedIn"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    <a href="https://github.com/siddhartha1223" target="_blank" class="text-slate-400 hover:text-white transition-transform hover:scale-110" aria-label="GitHub"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                    <a href="https://www.instagram.com/siddhartha_moogi?igsh=ZGt4dWptY3Fzd2Z2" target="_blank" class="text-slate-400 hover:text-white transition-transform hover:scale-110" aria-label="Instagram"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.012-3.584.07-4.85c.148-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500 font-mono text-sm">
+            <p>Designed & Built by Moogi Siddhartha</p>
+            <p>Copyright &copy; <span id="copyright-year"></span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        // Simple mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
