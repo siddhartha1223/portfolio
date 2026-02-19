@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2364ffda%22>MS</text></svg>">
-    <title>Moogi Siddhartha | Full Stack Python Developer</title>
+    <title>Moogi Siddhartha | Full Stack Python Developer & Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,218 +14,168 @@
     <style>
         :root {
             --bg: #020c1b;
-            --card-bg: #0a192f;
+            --card-bg: #112240;
             --teal: #64ffda;
-            --heading: #e6f1ff;
+            --heading: #ccd6f6;
             --body: #8892b0;
         }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg);
-            color: var(--body);
-            margin: 0;
-        }
-        #loader {
-            position: fixed;
-            inset: 0;
-            background: var(--bg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-            transition: opacity 0.5s ease;
-        }
-        .hex-loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--teal);
-            border-top-color: transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--body); margin: 0; }
         .font-display { font-family: 'Roboto Slab', serif; color: var(--heading); }
-        .glass-nav { background-color: rgba(2, 12, 27, 0.85); backdrop-filter: blur(10px); }
-        .card { background-color: var(--card-bg); transition: all 0.3s ease; border: 1px solid transparent; }
-        .card:hover { transform: translateY(-5px); border: 1px solid var(--teal); }
-        
-        .section-title {
-            font-weight: 700;
-            font-size: 2.5rem;
-            color: var(--heading);
-            position: relative;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--teal);
-            border-radius: 2px;
-        }
-        .nav-link { transition: color 0.3s ease; color: var(--heading); }
+        .glass-nav { background-color: rgba(10, 25, 47, 0.85); backdrop-filter: blur(10px); }
+        .card { background-color: var(--card-bg); transition: all 0.3s ease; box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7); }
+        .card:hover { transform: translateY(-10px); border: 1px solid var(--teal); }
+        .section-title { font-weight: 700; font-size: 2.5rem; color: #ccd6f6; position: relative; padding-bottom: 10px; text-align: center; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--teal); border-radius: 2px; }
+        .btn-primary { border: 1px solid var(--teal); color: var(--teal); transition: 0.3s; }
+        .btn-primary:hover { background: rgba(100, 255, 218, 0.1); }
         .nav-link:hover { color: var(--teal); }
-        .btn-primary {
-            background-color: transparent;
-            border: 1px solid var(--teal);
-            color: var(--teal);
-            transition: 0.3s;
-        }
-        .btn-primary:hover { background-color: rgba(100, 255, 218, 0.1); }
     </style>
 </head>
 <body>
-
-    <div id="loader"><div class="hex-loader"></div></div>
 
     <header class="glass-nav sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white font-mono">MS</a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#certifications" class="nav-link">Certifications</a>
-                <a href="#photography" class="nav-link">Photography</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link text-white">About</a>
+                <a href="#experience" class="nav-link text-white">Experience</a>
+                <a href="#work" class="nav-link text-white">Work</a>
+                <a href="#certifications" class="nav-link text-white">Certifications</a>
+                <a href="#photography" class="nav-link text-white">Photography</a>
+                <a href="#contact" class="nav-link text-white">Contact</a>
                 <a href="https://drive.google.com/file/d/1wT07UvGTaC9Mu7d3RVzxq90ns3lBd624/view?usp=sharing" target="_blank" class="btn-primary px-5 py-2 rounded-md font-semibold text-sm">Resume</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-            </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-[#020c1b]">
-            <a href="#about" class="block py-2">About</a>
-            <a href="#work" class="block py-2">Work</a>
-            <a href="#certifications" class="block py-2">Certifications</a>
-            <a href="#photography" class="block py-2">Photography</a>
-            <a href="#contact" class="block py-2">Contact</a>
-        </div>
     </header>
 
     <main class="container mx-auto px-6">
         <section class="min-h-screen flex flex-col justify-center">
-            <div data-aos="fade-up" class="max-w-4xl">
-                <span class="text-lg text-teal-300 font-mono">Hi, my name is</span>
+            <div data-aos="fade-up">
+                <span class="text-teal-300 font-mono">Hi, my name is</span>
                 <h1 class="font-display text-5xl md:text-7xl font-extrabold mt-4 mb-2">Moogi Siddhartha.</h1>
-                <h2 class="font-display text-4xl md:text-6xl font-extrabold text-slate-400 mb-8">Aspiring Full Stack Python Developer.</h2>
+                <h2 class="font-display text-4xl md:text-6xl font-extrabold text-slate-400 mb-8">Full Stack Python Developer & Designer.</h2>
                 <p class="text-lg max-w-xl mb-12">
-                    I specialize in building robust backend architectures and database-driven applications. Focused on writing clean, modular code following MVC and OOP principles[cite: 6, 9].
+                    I build robust backend systems and intuitive digital experiences. Specializing in Python (Flask), MySQL architecture, and UI/UX design.
                 </p>
-                <div class="flex items-center gap-8">
-                    <a href="#work" class="btn-primary px-10 py-4 rounded-md text-lg font-semibold">Check out my work!</a>
+                <div class="flex gap-6">
+                    <a href="#work" class="btn-primary px-10 py-4 rounded-md text-lg font-semibold">View My Work</a>
                 </div>
             </div>
         </section>
 
         <section id="about" class="py-20 md:py-32">
-            <h2 class="font-display section-title mb-16">About Me</h2>
+            <h2 class="section-title mb-16">About Me</h2>
             <div class="grid md:grid-cols-5 gap-12 items-center" data-aos="fade-up">
                 <div class="md:col-span-3">
-                    <p class="mb-4">
-                        Hello! I'm Siddhartha, a B.Tech student at Raghu Engineering College specializing in Data Science[cite: 20, 21]. I have transitioned my focus toward backend engineering, solving complex logic and architectural challenges.
+                    <p class="mb-4 text-lg">
+                        I'm a B.Tech student at Raghu Engineering College specializing in Data Science. I bridge the gap between complex backend logic and user-centric design.
                     </p>
-                    <div class="mt-8 bg-[#112240] p-6 rounded-lg border border-teal-300/10 grid grid-cols-2 gap-4">
-                        <div>
-                            <h4 class="text-teal-300 font-mono text-xs mb-2 uppercase">Backend [cite: 12]</h4>
-                            <ul class="text-xs space-y-1"><li>Flask</li><li>REST APIs</li><li>MySQL</li><li>MVC Architecture</li></ul>
-                        </div>
-                        <div>
-                            <h4 class="text-teal-300 font-mono text-xs mb-2 uppercase">Frontend [cite: 13]</h4>
-                            <ul class="text-xs space-y-1"><li>HTML5/CSS3</li><li>Bootstrap</li><li>Responsive Design</li></ul>
-                        </div>
-                    </div>
+                    <p class="mb-6 font-mono text-teal-300 text-sm">Recently used technologies:</p>
+                    <ul class="grid grid-cols-2 gap-2 text-sm font-mono">
+                        <li>▹ Python (Flask)</li>
+                        <li>▹ SQL (MySQL)</li>
+                        <li>▹ AWS Cloud</li>
+                        <li>▹ Figma (UI/UX)</li>
+                        <li>▹ JavaScript</li>
+                        <li>▹ Postman / Git</li>
+                    </ul>
                 </div>
                 <div class="md:col-span-2">
-                    <img src="images/Profile.jpeg" alt="Moogi Siddhartha" class="rounded-lg w-full border-2 border-teal-300/20">
+                    <img src="images/Profile.jpeg" alt="Moogi Siddhartha" class="rounded-lg border-2 border-teal-300/20 shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 md:py-32">
+            <h2 class="section-title mb-16">Where I've Worked</h2>
+            <div class="max-w-3xl mx-auto space-y-12" data-aos="fade-up">
+                <div class="border-l-2 border-teal-300 pl-8">
+                    <h3 class="text-xl font-bold text-white">Frontend Web Intern <span class="text-teal-300">@ MotionCut</span></h3>
+                    <p class="text-sm font-mono mb-4">May 2025 - July 2025</p>
+                    <p>Focused on responsive web design and building the AAIR booking interface.</p>
+                </div>
+                <div class="border-l-2 border-[#233554] pl-8">
+                    <h3 class="text-xl font-bold text-white">AWS Internships</h3>
+                    <p class="text-sm font-mono mb-4">Jan 2025 - June 2025</p>
+                    <p>Completed tracks in Data Engineering, AI/ML, and Cloud Foundations.</p>
                 </div>
             </div>
         </section>
 
         <section id="work" class="py-20 md:py-32">
-            <h2 class="font-display section-title mb-16">Things I've Built</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h2 class="section-title mb-16">Things I've Built</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <div class="card p-8 rounded-lg flex flex-col" data-aos="fade-up">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs text-teal-300 font-mono">FULL-STACK APP [cite: 24]</span>
-                        <a href="https://github.com/siddhartha1223" target="_blank"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                    <div class="flex justify-between mb-4 text-teal-300">
+                        <span class="text-xs font-mono">FULL-STACK</span>
+                        <a href="https://github.com/siddhartha1223" target="_blank"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Flight & Train Booking</h3>
-                    <p class="text-sm mb-4">Flask MVC backend with 15+ routes and 6+ normalized MySQL tables[cite: 28, 29].</p>
-                    <div class="flex gap-2 text-[10px] text-teal-300"><span>Flask</span><span>MySQL</span><span>Render</span></div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Flight & Train Booking App</h3>
+                    <p class="text-sm mb-4">Architected a Flask MVC system with 15+ dedicated routes and 6+ normalized MySQL tables for travel inventory.</p>
+                    <div class="flex gap-4 font-mono text-[10px] text-teal-300"><span>Flask</span> <span>MySQL</span> <span>Gunicorn</span></div>
                 </div>
+
                 <div class="card p-8 rounded-lg flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs text-teal-300 font-mono">AUTOMATION [cite: 41]</span>
-                        <a href="https://github.com/siddhartha1223" target="_blank"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">ETL Data Pipeline</h3>
-                    <p class="text-sm mb-4">Python pipeline for automated extraction, cleaning, and MySQL loading[cite: 43, 46].</p>
-                    <div class="flex gap-2 text-[10px] text-teal-300"><span>Python</span><span>MySQL</span><span>Pandas</span></div>
+                    <span class="text-xs font-mono text-teal-300 mb-4">UI/UX DESIGN</span>
+                    <h3 class="text-2xl font-bold text-white mb-2">Food Ordering App Concept</h3>
+                    <p class="text-sm mb-4">Mobile-first concept screens created in Figma focusing on intuitive user flows and accessibility.</p>
+                    <div class="flex gap-4 font-mono text-[10px] text-teal-300"><span>Figma</span> <span>Prototyping</span></div>
                 </div>
             </div>
         </section>
 
         <section id="certifications" class="py-20">
-            <h2 class="font-display section-title mb-16">Certifications</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="card p-4 text-center text-xs">AWS Data Engineering [cite: 49]</div>
-                <div class="card p-4 text-center text-xs">AWS Machine Learning [cite: 50]</div>
-                <div class="card p-4 text-center text-xs">Java OOP (NPTEL) [cite: 52]</div>
-                <div class="card p-4 text-center text-xs">SQL Basics [cite: 53]</div>
+            <h2 class="section-title mb-16">Credentials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card p-6 text-center rounded-lg">
+                    <h4 class="font-bold text-white">AWS Data Engineering</h4>
+                    <p class="text-xs text-slate-400">AICTE EduSkills</p>
+                </div>
+                <div class="card p-6 text-center rounded-lg">
+                    <h4 class="font-bold text-white">AWS Machine Learning</h4>
+                    <p class="text-xs text-slate-400">AICTE EduSkills</p>
+                </div>
+                <div class="card p-6 text-center rounded-lg">
+                    <h4 class="font-bold text-white">Java OOP</h4>
+                    <p class="text-xs text-slate-400">NPTEL</p>
+                </div>
             </div>
         </section>
 
         <section id="photography" class="py-20 md:py-32">
-            <h2 class="font-display section-title mb-16">Photography & Awards</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-                <img src="images/Photo1.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
-                <img src="images/Photo2.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
-                <img src="images/Photo3.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
-                <img src="images/Photo4.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
-                <img src="images/Photo5.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
-                <img src="images/Photo6.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+            <h2 class="section-title mb-16">Photography & Awards</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12" data-aos="fade-up">
+                <img src="images/Photo1.jpeg" class="rounded h-48 w-full object-cover">
+                <img src="images/Photo2.jpeg" class="rounded h-48 w-full object-cover">
+                <img src="images/Photo3.jpeg" class="rounded h-48 w-full object-cover">
+                <img src="images/Photo4.jpeg" class="rounded h-48 w-full object-cover">
+                <img src="images/Photo5.jpeg" class="rounded h-48 w-full object-cover">
+                <img src="images/Photo6.jpeg" class="rounded h-48 w-full object-cover">
             </div>
-            <div class="card max-w-4xl mx-auto md:flex items-center overflow-hidden">
-                <img src="images/Achievement.jpeg" class="md:w-1/3 object-cover h-full">
+            <div class="card flex flex-col md:flex-row items-center max-w-4xl mx-auto rounded-lg overflow-hidden">
+                <img src="images/Achievement.jpeg" class="md:w-1/3 object-cover">
                 <div class="p-8">
-                    <h3 class="text-xl font-bold">Winner, ISRO Photography Contest</h3>
-                    <p class="text-slate-400">College Level – 2023</p>
+                    <h3 class="text-xl font-bold text-white">Winner, ISRO Photography Contest</h3>
+                    <p class="text-slate-400">College Level — 2023</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="py-20 text-center">
-            <h3 class="font-mono text-teal-300">What's Next?</h3>
-            <h2 class="font-display text-5xl font-bold text-slate-200 my-4">Get In Touch</h2>
-            <div class="flex justify-center gap-6 mt-8">
-                <a href="mailto:moogisiddhartha@gmail.com" class="hover:text-teal-300 font-mono">moogisiddhartha@gmail.com [cite: 2]</a>
-            </div>
+            <h2 class="section-title mb-8">Get In Touch</h2>
+            <p class="mb-12 max-w-lg mx-auto">Open for new opportunities in Full Stack Development and Backend Engineering.</p>
+            <a href="mailto:moogisiddhartha@gmail.com" class="btn-primary px-10 py-4 rounded-md">Send a Message</a>
         </section>
     </main>
 
-    <footer class="py-6 text-center text-xs text-gray-500 font-mono">
+    <footer class="py-12 text-center text-xs font-mono text-slate-500">
         <p>Designed & Built by Moogi Siddhartha</p>
-        <p id="copyright-year"></p>
+        <p class="mt-2">Copyright © 2026</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            loader.style.opacity = '0';
-            setTimeout(() => loader.style.display = 'none', 500);
-        });
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        document.getElementById('copyright-year').textContent = `Copyright © ${new Date().getFullYear()}. All Rights Reserved.`;
     </script>
 </body>
 </html>
