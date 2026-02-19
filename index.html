@@ -25,7 +25,6 @@
             color: var(--body);
             margin: 0;
         }
-        /* Loading Screen */
         #loader {
             position: fixed;
             inset: 0;
@@ -57,6 +56,7 @@
             color: var(--heading);
             position: relative;
             padding-bottom: 10px;
+            text-align: center;
         }
         .section-title::after {
             content: '';
@@ -78,15 +78,6 @@
             transition: 0.3s;
         }
         .btn-primary:hover { background-color: rgba(100, 255, 218, 0.1); }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            bottom: 10px;
-            width: 2px;
-            background-color: #233554;
-        }
     </style>
 </head>
 <body>
@@ -98,9 +89,9 @@
             <a href="#" class="text-2xl font-bold text-white font-mono">MS</a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#work" class="nav-link">Work</a>
                 <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#photography" class="nav-link">Photography</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="https://drive.google.com/file/d/1wT07UvGTaC9Mu7d3RVzxq90ns3lBd624/view?usp=sharing" target="_blank" class="btn-primary px-5 py-2 rounded-md font-semibold text-sm">Resume</a>
             </div>
@@ -109,11 +100,11 @@
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-[#020c1b]">
-            <a href="#about" class="block py-2 text-gray-300">About</a>
-            <a href="#experience" class="block py-2 text-gray-300">Experience</a>
-            <a href="#work" class="block py-2 text-gray-300">Work</a>
-            <a href="#certifications" class="block py-2 text-gray-300">Certifications</a>
-            <a href="#contact" class="block py-2 text-gray-300">Contact</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#work" class="block py-2">Work</a>
+            <a href="#certifications" class="block py-2">Certifications</a>
+            <a href="#photography" class="block py-2">Photography</a>
+            <a href="#contact" class="block py-2">Contact</a>
         </div>
     </header>
 
@@ -121,10 +112,10 @@
         <section class="min-h-screen flex flex-col justify-center">
             <div data-aos="fade-up" class="max-w-4xl">
                 <span class="text-lg text-teal-300 font-mono">Hi, my name is</span>
-                <h1 class="font-display text-5xl md:text-7xl font-extrabold mt-4 mb-2">Moogi Siddhartha. [cite: 1]</h1>
-                <h2 class="font-display text-4xl md:text-6xl font-extrabold text-slate-400 mb-8">Aspiring Full Stack Python Developer. </h2>
+                <h1 class="font-display text-5xl md:text-7xl font-extrabold mt-4 mb-2">Moogi Siddhartha.</h1>
+                <h2 class="font-display text-4xl md:text-6xl font-extrabold text-slate-400 mb-8">Aspiring Full Stack Python Developer.</h2>
                 <p class="text-lg max-w-xl mb-12">
-                    I specialize in building robust backend architectures and database-driven applications. Focused on writing clean, modular code following MVC and OOP principles to create seamless digital experiences[cite: 9].
+                    I specialize in building robust backend architectures and database-driven applications. Focused on writing clean, modular code following MVC and OOP principles[cite: 6, 9].
                 </p>
                 <div class="flex items-center gap-8">
                     <a href="#work" class="btn-primary px-10 py-4 rounded-md text-lg font-semibold">Check out my work!</a>
@@ -133,194 +124,108 @@
         </section>
 
         <section id="about" class="py-20 md:py-32">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-display section-title">About Me</h2>
-            </div>
+            <h2 class="font-display section-title mb-16">About Me</h2>
             <div class="grid md:grid-cols-5 gap-12 items-center" data-aos="fade-up">
                 <div class="md:col-span-3">
                     <p class="mb-4">
-                        Hello! I'm Siddhartha, a detail-oriented B.Tech student at Raghu Engineering College specializing in Data Science[cite: 20, 21]. I have transitioned my focus toward backend engineering, where I enjoy solving complex logic and architectural challenges.
+                        Hello! I'm Siddhartha, a B.Tech student at Raghu Engineering College specializing in Data Science[cite: 20, 21]. I have transitioned my focus toward backend engineering, solving complex logic and architectural challenges.
                     </p>
-                    <p class="mb-6">
-                        I am committed to developing technology that follows industry standards like MVC and clean relational database design[cite: 9, 15].
-                    </p>
-                    
-                    <div class="mt-8 bg-[#112240] p-8 rounded-lg border border-teal-300/10">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                            <div>
-                                <h4 class="text-teal-300 font-mono text-xs mb-4 uppercase tracking-widest">Languages [cite: 11]</h4>
-                                <ul class="text-xs space-y-2">
-                                    <li>Python</li>
-                                    <li>SQL (MySQL)</li>
-                                    <li>JavaScript</li>
-                                    <li>Java & C</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-teal-300 font-mono text-xs mb-4 uppercase tracking-widest">Backend [cite: 12]</h4>
-                                <ul class="text-xs space-y-2">
-                                    <li>Flask (MVC)</li>
-                                    <li>REST API Design</li>
-                                    <li>Gunicorn & Render</li>
-                                    <li>Auth & Sessions</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-teal-300 font-mono text-xs mb-4 uppercase tracking-widest">Frontend [cite: 13]</h4>
-                                <ul class="text-xs space-y-2">
-                                    <li>HTML5 & CSS3</li>
-                                    <li>Bootstrap</li>
-                                    <li>Responsive Web</li>
-                                    <li>Jinja2</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-teal-300 font-mono text-xs mb-4 uppercase tracking-widest">Tools [cite: 16]</h4>
-                                <ul class="text-xs space-y-2">
-                                    <li>Git & GitHub</li>
-                                    <li>Postman</li>
-                                    <li>AWS Services</li>
-                                    <li>VS Code</li>
-                                </ul>
-                            </div>
+                    <div class="mt-8 bg-[#112240] p-6 rounded-lg border border-teal-300/10 grid grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-teal-300 font-mono text-xs mb-2 uppercase">Backend [cite: 12]</h4>
+                            <ul class="text-xs space-y-1"><li>Flask</li><li>REST APIs</li><li>MySQL</li><li>MVC Architecture</li></ul>
+                        </div>
+                        <div>
+                            <h4 class="text-teal-300 font-mono text-xs mb-2 uppercase">Frontend [cite: 13]</h4>
+                            <ul class="text-xs space-y-1"><li>HTML5/CSS3</li><li>Bootstrap</li><li>Responsive Design</li></ul>
                         </div>
                     </div>
                 </div>
-                <div class="md:col-span-2 relative">
-                    <div class="w-full h-full rounded-lg bg-teal-300/20 transition-transform transform hover:translate-x-2 hover:translate-y-2">
-                        <img src="images/Profile.jpeg" alt="Moogi Siddhartha" class="rounded-lg w-full h-auto object-cover relative z-10 -translate-x-4 -translate-y-4 filter grayscale hover:grayscale-0 transition-all duration-300">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="py-20 md:py-32">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-display section-title">Where I've Worked</h2>
-            </div>
-            <div class="relative max-w-3xl mx-auto timeline pl-8" data-aos="fade-up">
-                <div class="mb-12 relative">
-                    <h3 class="text-xl font-bold text-slate-200">Frontend Web Development Intern <span class="text-teal-300">@ MotionCut</span></h3>
-                    <p class="font-mono text-sm text-slate-400 mb-3">May 2025 – July 2025</p>
-                    <p class="mb-3">Developed and styled responsive, user-facing features for web applications using HTML, CSS, and Bootstrap.</p>
-                </div>
-                <div class="mb-12 relative">
-                    <h3 class="text-xl font-bold text-slate-200">AWS Data Engineering Intern <span class="text-teal-300">@ AICTE EduSkills</span></h3>
-                    <p class="font-mono text-sm text-slate-400 mb-3">Apr 2025 – Jun 2025 [cite: 49]</p>
-                    <p class="mb-3">Developed data pipelines using AWS Glue and Lambda; worked with S3 and Redshift for ETL processes.</p>
+                <div class="md:col-span-2">
+                    <img src="images/Profile.jpeg" alt="Moogi Siddhartha" class="rounded-lg w-full border-2 border-teal-300/20">
                 </div>
             </div>
         </section>
 
         <section id="work" class="py-20 md:py-32">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-display section-title">Things I've Built</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="card p-8 rounded-lg h-full flex flex-col" data-aos="fade-up">
+            <h2 class="font-display section-title mb-16">Things I've Built</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8 rounded-lg flex flex-col" data-aos="fade-up">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs text-teal-300 font-mono uppercase tracking-widest">Full-Stack App</span>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/siddhartha1223" target="_blank" class="hover:text-teal-300 transition-colors">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            </a>
-                            <a href="https://flight-booking-app-9903.onrender.com/" target="_blank" class="hover:text-teal-300 transition-colors">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"></path></svg>
-                            </a>
-                        </div>
+                        <span class="text-xs text-teal-300 font-mono">FULL-STACK APP [cite: 24]</span>
+                        <a href="https://github.com/siddhartha1223" target="_blank"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-200">Flight & Train Booking</h3>
-                    <p class="text-sm flex-grow mb-4">
-                        Architected a Flask MVC application managing 15+ routes and 10+ REST endpoints[cite: 28, 30]. Designed a normalized MySQL schema with 6+ tables to ensure data integrity[cite: 29].
-                    </p>
-                    <div class="flex flex-wrap gap-2 font-mono text-[10px] text-teal-300">
-                        <span>Flask</span> <span>MySQL</span> <span>Render</span> <span>Gunicorn</span>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Flight & Train Booking</h3>
+                    <p class="text-sm mb-4">Flask MVC backend with 15+ routes and 6+ normalized MySQL tables[cite: 28, 29].</p>
+                    <div class="flex gap-2 text-[10px] text-teal-300"><span>Flask</span><span>MySQL</span><span>Render</span></div>
                 </div>
-
-                <div class="card p-8 rounded-lg h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="card p-8 rounded-lg flex flex-col" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs text-teal-300 font-mono uppercase tracking-widest">Automation Script</span>
-                        <a href="https://github.com/siddhartha1223" target="_blank" class="hover:text-teal-300 transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        </a>
+                        <span class="text-xs text-teal-300 font-mono">AUTOMATION [cite: 41]</span>
+                        <a href="https://github.com/siddhartha1223" target="_blank"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-200">ETL Data Pipeline</h3>
-                    <p class="text-sm flex-grow mb-4">
-                        Built a Python-based pipeline for automated extraction and loading into MySQL[cite: 43, 46]. Implemented detailed logging and data validation to ensure pipeline accuracy[cite: 47].
-                    </p>
-                    <div class="flex flex-wrap gap-2 font-mono text-[10px] text-teal-300">
-                        <span>Python</span> <span>MySQL</span> <span>Automation</span>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-3">ETL Data Pipeline</h3>
+                    <p class="text-sm mb-4">Python pipeline for automated extraction, cleaning, and MySQL loading[cite: 43, 46].</p>
+                    <div class="flex gap-2 text-[10px] text-teal-300"><span>Python</span><span>MySQL</span><span>Pandas</span></div>
                 </div>
             </div>
         </section>
 
-        <section id="certifications" class="py-20 md:py-32">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-display section-title">Certifications</h2>
+        <section id="certifications" class="py-20">
+            <h2 class="font-display section-title mb-16">Certifications</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="card p-4 text-center text-xs">AWS Data Engineering [cite: 49]</div>
+                <div class="card p-4 text-center text-xs">AWS Machine Learning [cite: 50]</div>
+                <div class="card p-4 text-center text-xs">Java OOP (NPTEL) [cite: 52]</div>
+                <div class="card p-4 text-center text-xs">SQL Basics [cite: 53]</div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="card p-8 text-center" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-slate-200">AWS Data Engineering [cite: 49]</h3>
-                    <p class="text-slate-400 font-medium text-sm">AICTE EduSkills</p>
-                </div>
-                <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold mb-2 text-slate-200">AWS Machine Learning [cite: 50]</h3>
-                    <p class="text-slate-400 font-medium text-sm">AICTE EduSkills</p>
-                </div>
-                <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-bold mb-2 text-slate-200">OOP in Java [cite: 52]</h3>
-                    <p class="text-slate-400 font-medium text-sm">NPTEL</p>
+        </section>
+
+        <section id="photography" class="py-20 md:py-32">
+            <h2 class="font-display section-title mb-16">Photography & Awards</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                <img src="images/Photo1.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+                <img src="images/Photo2.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+                <img src="images/Photo3.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+                <img src="images/Photo4.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+                <img src="images/Photo5.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+                <img src="images/Photo6.jpeg" class="rounded opacity-80 hover:opacity-100 transition-opacity h-48 w-full object-cover">
+            </div>
+            <div class="card max-w-4xl mx-auto md:flex items-center overflow-hidden">
+                <img src="images/Achievement.jpeg" class="md:w-1/3 object-cover h-full">
+                <div class="p-8">
+                    <h3 class="text-xl font-bold">Winner, ISRO Photography Contest</h3>
+                    <p class="text-slate-400">College Level – 2023</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-20 md:py-32 text-center">
-            <div data-aos="fade-up">
-                <h3 class="font-mono text-teal-300">What's Next?</h3>
-                <h2 class="font-display text-5xl font-bold text-slate-200 my-4">Get In Touch</h2>
-                <p class="max-w-xl mx-auto mb-8">
-                    I'm actively seeking new opportunities as a Backend or Full Stack Developer. My inbox is always open!
-                </p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
-                    <a href="mailto:moogisiddhartha@gmail.com" class="text-lg font-mono text-slate-300 hover:text-teal-300 transition-colors">moogisiddhartha@gmail.com [cite: 2]</a>
-                    <span class="text-lg font-mono text-slate-300">+91 77308 95135 [cite: 2]</span>
-                </div>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://linkedin.com/in/moogi-siddhartha" target="_blank" class="text-slate-400 hover:text-white transition-transform hover:scale-110"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                    <a href="https://github.com/siddhartha1223" target="_blank" class="text-slate-400 hover:text-white transition-transform hover:scale-110"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                </div>
+        <section id="contact" class="py-20 text-center">
+            <h3 class="font-mono text-teal-300">What's Next?</h3>
+            <h2 class="font-display text-5xl font-bold text-slate-200 my-4">Get In Touch</h2>
+            <div class="flex justify-center gap-6 mt-8">
+                <a href="mailto:moogisiddhartha@gmail.com" class="hover:text-teal-300 font-mono">moogisiddhartha@gmail.com [cite: 2]</a>
             </div>
         </section>
     </main>
 
-    <footer class="py-6 border-t border-teal-300/10">
-        <div class="container mx-auto px-6 text-center text-gray-500 font-mono text-xs">
-            <p>Designed & Built by Moogi Siddhartha [cite: 1]</p>
-            <p class="mt-2">Copyright &copy; <span id="copyright-year"></span>. All Rights Reserved.</p>
-        </div>
+    <footer class="py-6 text-center text-xs text-gray-500 font-mono">
+        <p>Designed & Built by Moogi Siddhartha</p>
+        <p id="copyright-year"></p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
-        
-        // Loader functionality
         window.addEventListener('load', () => {
             const loader = document.getElementById('loader');
             loader.style.opacity = '0';
             setTimeout(() => loader.style.display = 'none', 500);
         });
-
-        // Mobile menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.getElementById('copyright-year').textContent = `Copyright © ${new Date().getFullYear()}. All Rights Reserved.`;
     </script>
 </body>
 </html>
